@@ -1,0 +1,57 @@
+@mixin hoverNav-effect{
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+body{
+  background-color: #0D0D0D;
+  color: #ffffff;
+  
+  header{
+    height: 10vh;
+    .navigation{
+      .nav-list{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+
+        .nav-item:hover{
+          @include hoverNav-effect();
+        }
+        
+        #search-string:hover{
+          @include none;
+          color: white;
+        }
+        
+        .nav-item{
+          padding: 15px 15px;
+          border-radius: 50%;
+          background-color: #292929;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          transition: all .3s ease;
+        }
+        
+        .nav-item[id="search-string"]{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 15px;
+          padding: 15px 20px;
+          border-radius: 25px;
+          background-color: #292929;
+
+          .vertical-line-header{
+            height: 32px;
+            width: 1px;
+            background-color: #ffffff;
+            opacity: 0.3;
+          }
+        }
+      }
+    }
+  }
+}
