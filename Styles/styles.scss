@@ -1,57 +1,117 @@
-@mixin hoverNav-effect{
-  cursor: pointer;
-  transform: scale(1.1);
-}
-
 body{
   background-color: #0D0D0D;
-  color: #ffffff;
-  
-  header{
+  color: white;
+  font-family: "Open Sans", sans-serif;
+
+  .header-wrapper{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 3vh;
+    flex-wrap: wrap;
     height: 10vh;
-    .navigation{
-      .nav-list{
+
+    .main-infoBtns-container{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 25px;
+
+      .home-icon-container{
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 25px;
+        background-color: #2e2e2e;
+        border-radius: 50%;
+        padding: 13px 13px;
+        cursor: pointer;
+        transition: all .3s ease;
+      }
+      
+      .home-icon-container:hover{
+        transform: scale(1.05);
+      }
 
-        .nav-item:hover{
-          @include hoverNav-effect();
-        }
-        
-        #search-string:hover{
-          @include none;
-          color: white;
-        }
-        
-        .nav-item{
-          padding: 15px 15px;
-          border-radius: 50%;
-          background-color: #292929;
+      .search-line-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 50px;
+        background-color: #2e2e2e;
+        padding: 15px 30px;
+        border-radius: 35px;
+        border: 1px solid transparent;
+        cursor: pointer;
+        transition: border .3s ease;
+
+        .rewiew-btn{
           display: flex;
           justify-content: center;
           align-items: center;
-          transition: all .3s ease;
-        }
-        
-        .nav-item[id="search-string"]{
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          gap: 15px;
-          padding: 15px 20px;
-          border-radius: 25px;
-          background-color: #292929;
-
-          .vertical-line-header{
+          gap: 25px;
+          
+          .vertical-line{
             height: 32px;
             width: 1px;
-            background-color: #ffffff;
-            opacity: 0.3;
+            background-color: grey;
           }
         }
       }
+      .search-line-container:hover{
+        border: 1px solid grey;
+      }
+
+      .search-line-container.active {
+        border: 1px solid white;
+      }
+    }
+
+    .header-btns-container{
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      flex-wrap: wrap;
+
+      .btn{
+        transition: all 0.3s ease;
+        cursor: pointer;
+        border: 10px solid transparent;
+      }
+
+      .btn:hover{
+        transform: scale(1.03);
+        font-weight: bold;
+      }
+
+      #donwload-btn{
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
+
+      .vertical-line{
+        height: 32px;
+        width: 1px;
+        background-color: grey;
+      }
+
+      #signIn-btn{
+        background-color: white;
+        color: #0D0D0D;
+        padding: 5px 15px;
+        border-radius: 25px;
+        font-weight: bold;
+        font-family: "Roboto", sans-serif;
+      }
+    }
+  }
+  .main-wrapper{
+    margin-top: 10%;
+    margin: 5% 15%;
+    
+    .main-title{
+      font-weight: bold;
+      font-size: 24px;
     }
   }
 }

@@ -13,35 +13,78 @@
   <title>VibeStream</title>
 </head>
 <body>
-  <header class="header" id="header" style="display: flex; justify-content: space-between;">
-    <div class="header-logo-container">
-      <img src="./Images/main-logo.png" alt="Vibe Stream" style="height: auto; width: 25%;">
+  <header class="header" id="header">
+    <div class="header-wrapper">
+      <div class="logo-container">
+        <img src="./Images/main-logo.png" alt="Main Logo" style="width: 300px; height: auto; cursor: pointer;">
+      </div>
+      <div class="main-infoBtns-container">
+        <div class="home-icon-container">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="white" class="bi bi-house-door" viewBox="0 0 16 16">
+            <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4z"/>
+          </svg>
+        </div>
+        <div class="search-line-container">
+          <input type="text" class="search-line" name="fsearch" id="fsearch" placeholder="Search...">
+          <div class="rewiew-btn">
+            <div class="vertical-line"></div>
+            <svg style="margin-left: 15px; cursor: pointer;" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="white" class="bi bi-search" viewBox="0 0 16 16">
+              <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="header-btns-container">
+        <div class="btn" id="premiun-btn">Premium</div>
+        <div class="btn" id="support-btn">Підтримка</div>
+        <div class="vertical-line"></div>
+        <div class="btn" id="donwload-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" class="bi bi-download" viewBox="0 0 16 16">
+            <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
+            <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z"/>
+          </svg>
+          Завантаження додатку
+        </div>
+        <div class="btn" id="signUp-btn">Зареєструватися</div>
+        <div class="btn" id="signIn-btn">Увійти</div>
+      </div>
     </div>
-    <nav class="navigation">
-      <ul class="nav-list">
-        <li class="nav-item">
-          <svg id="home" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="white" class="bi bi-house-fill" viewBox="0 0 16 16">
-            <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293z"/>
-            <path d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293z"/>
-          </svg>
-        </li>
-        <li class="nav-item" id="search-string">
-          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="white" class="bi bi-search" viewBox="0 0 16 16">
-            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
-          </svg>
-          <input type="text" class="search-string" id="fsearch-string" name="fsearch-string" style="background-color: white;">
-          <div class="vertical-line-header"></div>
-          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="white" class="bi bi-vinyl-fill" viewBox="0 0 16 16">
-            <path d="M8 6a2 2 0 1 0 0 4 2 2 0 0 0 0-4m0 3a1 1 0 1 1 0-2 1 1 0 0 1 0 2"/>
-            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4 8a4 4 0 1 0 8 0 4 4 0 0 0-8 0"/>
-          </svg>
-        </li>
-        <!-- <li class="nav-item"></li>
-        <li class="nav-item"></li>
-        <li class="nav-item"></li> -->
-      </ul>
-    </nav>
   </header>
+  <article class="article" id="article">
+    <main class="main" id="main">
+      <section class="main-section" id="mainSection">
+        <div class="main-wrapper">
+          <div class="main-title">
+            <h1>
+              Переглянути все
+            </h1>
+          </div>
+          <div class="cards-list-container">
+            <ul class="cards-list">
+              <li class="card" id="music">
+                <div class="card-title">Музика</div>
+              </li>
+              <li class="card" id="podcasts">
+                <div class="card-title">Подксти</div>
+              </li>
+              <li class="card" id="activities">
+                <div class="card-title">Заходи</div>
+              </li>
+              <li class="card" id="forYou">
+                <div class="card-title">Для вас</div>
+              </li>
+              <li class="card" id="newReleases">
+                <div class="card-title">Нові релізи</div>
+              </li>
+              <li class="card" id="Pop">
+                <div class="card-title">Поп</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+  </article>
   <script src="./Scripts/scripts.js"></script>
 </body>
 </html>

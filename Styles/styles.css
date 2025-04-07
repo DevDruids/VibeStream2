@@ -1,11 +1,23 @@
 body {
   background-color: #0D0D0D;
-  color: #ffffff;
+  color: white;
+  font-family: "Open Sans", sans-serif;
 }
-body header {
+body .header-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 3vh;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   height: 10vh;
 }
-body header .navigation .nav-list {
+body .header-wrapper .main-infoBtns-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -17,15 +29,7 @@ body header .navigation .nav-list {
           align-items: center;
   gap: 25px;
 }
-body header .navigation .nav-list .nav-item:hover {
-  cursor: pointer;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-}
-body header .navigation .nav-list .nav-item {
-  padding: 15px 15px;
-  border-radius: 50%;
-  background-color: #292929;
+body .header-wrapper .main-infoBtns-container .home-icon-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -35,27 +39,108 @@ body header .navigation .nav-list .nav-item {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: #2e2e2e;
+  border-radius: 50%;
+  padding: 13px 13px;
+  cursor: pointer;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-body header .navigation .nav-list .nav-item[id=search-string] {
+body .header-wrapper .main-infoBtns-container .home-icon-container:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+body .header-wrapper .main-infoBtns-container .search-line-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 50px;
+  background-color: #2e2e2e;
+  padding: 15px 30px;
+  border-radius: 35px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  -webkit-transition: border 0.3s ease;
+  transition: border 0.3s ease;
+}
+body .header-wrapper .main-infoBtns-container .search-line-container .rewiew-btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 25px;
+}
+body .header-wrapper .main-infoBtns-container .search-line-container .rewiew-btn .vertical-line {
+  height: 32px;
+  width: 1px;
+  background-color: grey;
+}
+body .header-wrapper .main-infoBtns-container .search-line-container:hover {
+  border: 1px solid grey;
+}
+body .header-wrapper .main-infoBtns-container .search-line-container.active {
+  border: 1px solid white;
+}
+body .header-wrapper .header-btns-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 25px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+body .header-wrapper .header-btns-container .btn {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 10px solid transparent;
+}
+body .header-wrapper .header-btns-container .btn:hover {
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+  font-weight: bold;
+}
+body .header-wrapper .header-btns-container #donwload-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   gap: 15px;
-  padding: 15px 20px;
-  border-radius: 25px;
-  background-color: #292929;
 }
-body header .navigation .nav-list .nav-item[id=search-string] .vertical-line-header {
+body .header-wrapper .header-btns-container .vertical-line {
   height: 32px;
   width: 1px;
-  background-color: #ffffff;
-  opacity: 0.3;
+  background-color: grey;
+}
+body .header-wrapper .header-btns-container #signIn-btn {
+  background-color: white;
+  color: #0D0D0D;
+  padding: 5px 15px;
+  border-radius: 25px;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+}
+body .main-wrapper {
+  margin-top: 10%;
+  margin: 5% 15%;
+}
+body .main-wrapper .main-title {
+  font-weight: bold;
+  font-size: 24px;
 }
